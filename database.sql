@@ -1,8 +1,8 @@
-set global general_log = on;
-
 drop database if exists dvba;
 create database if not exists dvba;
 use dvba;
+
+set global general_log = on;
 
 create table users
 (
