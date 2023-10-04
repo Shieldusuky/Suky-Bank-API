@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	var smsauth = sequelize.define("smsauth", {
+	var smsauths = sequelize.define("smsauths", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -17,5 +17,5 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     timestamps: false
   });
-	return smsauth;
+	return smsauths;
 };
