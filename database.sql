@@ -13,7 +13,7 @@ create table users
     account_number integer UNIQUE,
     balance        BIGINT unsigned default 10000 NOT NULL,
     is_admin       boolean         default false,
-    email          varchar(255)                  NOT NULL
+    email          varchar(255)                  NOT NULL,
     membership     varchar(255)                  NOT NULL    
 ) engine = innodb;
 
