@@ -59,7 +59,7 @@ drop database if exists board;
 create database if not exists board;
 use board;
 
-create table notice
+create table notices
 (
     id        int not null auto_increment,
     userId    varchar(30),
@@ -71,7 +71,7 @@ create table notice
     PRIMARY KEY (id)
 ) engine = innodb;
 
-create table qna
+create table qnas
 (
     id        int not null auto_increment,
     userId    varchar(30),

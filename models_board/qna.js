@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	var Qna = sequelize.define("qna", {
+	var Qnas = sequelize.define("qnas", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -32,5 +32,5 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamps: false
     });
-	return Qna;
+	return Qnas;
 };
