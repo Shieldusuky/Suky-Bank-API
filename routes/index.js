@@ -8,6 +8,7 @@ const beneficiaryRouter = require("../lib/api/Beneficiary");
 const userRouter = require("../lib/api/User");
 const checkRouter = require("../lib/api/Auth");
 const noticeRouter = require("../lib/api/notice");
+const qnaRouter = require("../lib/api/qna");
 
 router.use("/balance", balanceRouter);
 router.use("/transactions", transactionsRouter)
@@ -16,5 +17,6 @@ router.use("/beneficiary", beneficiaryRouter);
 router.use("/user", userRouter);
 router.use("/auth", checkRouter);
 router.use("/notice", noticeRouter);
+router.use("/qna", qnaRouter);
 
 module.exports = router;
