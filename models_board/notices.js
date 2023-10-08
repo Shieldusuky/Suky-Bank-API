@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-	var Notices = sequelize.define("notices", {
+    var Notices = sequelize.define("notices", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,30 +7,30 @@ module.exports = function(sequelize, DataTypes) {
         },
         userId: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
         title: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false,
         },
         content: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false,
         },
         filepath: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: true,
         },
-        createAt: {
+        createdAt: {
             type: DataTypes.DATE,
-            allowNull: true
+            allowNull: false,
         },
         updatedAt: {
             type: DataTypes.DATE,
-            allowNull: true
+            allowNull: false,
         }
     }, {
         timestamps: false
     });
-	return Notices;
+    return Notices;
 };
