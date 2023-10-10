@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path");
+
 
 const healthRouter = require("../lib/api/Health");
 const transactionsRouter = require("../lib/api/Transactions");
@@ -18,5 +20,13 @@ router.use("/user", userRouter);
 router.use("/auth", checkRouter);
 router.use("/notice", noticeRouter);
 router.use("/qna", qnaRouter);
+
+router.get("/download/:filename", (req, res) => {
+    const filename = req.params.filename;
+    const filePath = path.join(__dirname, "../lib/file", filename);
+  
+    res.download(filePath);
+  });
+
 
 module.exports = router;
