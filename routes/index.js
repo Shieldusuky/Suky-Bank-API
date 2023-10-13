@@ -23,7 +23,7 @@ router.use("/qna", qnaRouter);
 
 router.get("/download/:filename", (req, res) => {
     const filename = req.params.filename;
-    const filePath = path.join(__dirname, "../lib/file", filename);
+    const filePath = path.join(__dirname, "../file", filename);
   
     res.setHeader('Content-Disposition', `attachment; filename=${filename}`);
     res.sendFile(filePath);
